@@ -1,0 +1,28 @@
+[project]
+name = "memory-evole"
+version = "0.1.0"
+description = "智能体记忆自动进化系统 — 三层记忆 + 自动压缩/合并/抽象/关联"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "langchain>=0.3",
+    "langchain-core>=0.3",
+    "langchain-openai>=0.2",
+    "networkx>=3.2",
+    "numpy>=1.24",
+    "pydantic>=2.5",
+    "python-dotenv>=1.0",
+    "jieba>=0.42",
+]
+
+[project.optional-dependencies]
+viz = ["pyvis>=0.3", "matplotlib>=3.7"]
+dev = ["pytest>=7.4"]
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
